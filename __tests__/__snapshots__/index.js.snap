@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`unknown plugin transform in function: transform in function 1`] = `
+exports[`nullish-coalescing-bad-homemade-version transform in function: transform in function 1`] = `
 
 function foo(opts) {
   var foo = opts.foo ?? "default";

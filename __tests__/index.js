@@ -4,6 +4,7 @@ import plugin from "../src";
 
 pluginTester({
   plugin,
+  pluginName: "nullish-coalescing-bad-homemade-version",
   snapshot: true,
   tests: [
     {
