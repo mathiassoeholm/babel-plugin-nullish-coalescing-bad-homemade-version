@@ -1,0 +1,4 @@
+/node_modules
+
+# Avoid security issues by locking in on certain outdated versions
+yarn.lock
