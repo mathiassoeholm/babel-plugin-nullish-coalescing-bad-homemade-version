@@ -1,4 +1,5 @@
 /node_modules
+yarn-error.log
 
 # Avoid security issues by locking in on certain outdated versions
 yarn.lock

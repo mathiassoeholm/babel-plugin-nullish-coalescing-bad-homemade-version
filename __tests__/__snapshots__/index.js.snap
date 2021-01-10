@@ -9,7 +9,8 @@ function foo(opts) {
       ↓ ↓ ↓ ↓ ↓ ↓
 
 function foo(opts) {
-  var foo = opts.foo ?? "default";
+  var _opts$foo = opts.foo;
+  var foo = _opts$foo !== null && _opts$foo !== void 0 ? _opts$foo : "default";
 }
 
 
