@@ -1,5 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`nullish-coalescing-bad-homemade-version multiple ??: multiple ?? 1`] = `
+
+a ?? b ?? c
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+var _ref, _a;
+
+(_ref = (_a = a) !== null && _a !== void 0 ? _a : b) !== null && _ref !== void 0
+  ? _ref
+  : c;
+
+
+`;
+
 exports[`nullish-coalescing-bad-homemade-version transform in function: transform in function 1`] = `
 
 function foo(opts) {
@@ -9,8 +24,12 @@ function foo(opts) {
       ↓ ↓ ↓ ↓ ↓ ↓
 
 function foo(opts) {
-  var _opts$foo = opts.foo;
-  var foo = _opts$foo !== null && _opts$foo !== void 0 ? _opts$foo : "default";
+  var _opts$foo;
+
+  var foo =
+    (_opts$foo = opts.foo) !== null && _opts$foo !== void 0
+      ? _opts$foo
+      : "default";
 }
 
 

@@ -16,9 +16,10 @@ export default declare((api, options) => {
         const rightOperand = path.node.right;
 
         const leftId = path.scope.generateUidIdentifierBasedOnNode(leftOperand);
-        path.scope.push({ id: leftId, init: leftOperand });
+        path.scope.push({ id: t.cloneNode(leftId) });
+        const assignment = t.assignmentExpression("=", leftId, leftOperand);
 
-        const nullTest = t.binaryExpression("!==", leftId, t.nullLiteral());
+        const nullTest = t.binaryExpression("!==", assignment, t.nullLiteral());
         const undefinedTest = t.binaryExpression(
           "!==",
           leftId,

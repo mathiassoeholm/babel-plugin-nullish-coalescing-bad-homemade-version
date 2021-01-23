@@ -15,5 +15,11 @@ pluginTester({
         }
       `,
     },
+    {
+      title: "multiple ??",
+      code: `
+        a ?? b ?? c
+      `,
+    },
   ],
 });
